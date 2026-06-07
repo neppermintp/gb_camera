@@ -1,0 +1,51 @@
+/*=============================================
+GameBoy Gallery with image containers.
+==============================================*/
+
+.gb_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    max-width: 1500px;
+    text-align: center
+}
+
+.gb_cell{
+    max-width: 450px;
+    max-height: 450px;
+    flex-grow: 1;
+    flex-basis: 450px; /*Could be relaxed for image resizing.*/
+    background-color: rgba(55, 00, 88, .5);
+    border: 5px solid;
+    margin: 3px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gb_cell a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gb_item {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.desc {
+    background-color: rgba(55, 00, 88, .9);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+    padding: 3px;
+    border: 1px solid;
+}
