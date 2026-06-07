@@ -49,7 +49,7 @@ album-assets: convert-raw album-dir
 album-injection:
 	sed -i 's/<!-- TITLE -->/$(DATE_FILE)/g' $(FOLDER)/gallery.html
 	sed -i 's/<!-- HEADER_1 -->/$(DATE_HEADER)/g' $(FOLDER)/gallery.html
-	sed -i 's|<!-- NEW_ENTRY -->|    <dt>$(DATE_HEADER) \&mdash; <a href="./$(FOLDER)/gallery.html">$(FOLDER)</a></dt>\n    <!-- NEW_ENTRY -->|' index.html
+	sed -i 's|<!-- NEW_ENTRY -->|    <!-- NEW_ENTRY -->\n    <dt>$(DATE_HEADER) \&mdash; <a href="./$(FOLDER)/gallery.html">$(FOLDER)</a></dt>|' index.html
 
 album: album-assets album-injection
 	@for img in $(FOLDER)/png/*.png; do \
