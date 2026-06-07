@@ -57,5 +57,7 @@ album: album-assets album-injection
 	sed -i 's/<!-- GALLERY -->/<div class="gb_cell"><img src="png\/'"$$fname"'" class="gb_item"><\/div>\n    <!-- GALLERY -->\n/' $(FOLDER)/gallery.html; \
 	done
 
-# clean:
-# 	rm -rf $(BMP_DIR)
+nuke-project:
+	rm -rf src
+	cp -r templates/src src
+	cp templates/index.html index.html
